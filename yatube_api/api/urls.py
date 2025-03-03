@@ -15,5 +15,5 @@ post_router.register('comments', CommentViewSet, basename='post-comments')
 
 urlpatterns = [
     path('api-token-auth/', obtain_auth_token, name='get_token'),
-    path('', include(router.urls + post_router.urls)),
+    path('v1/', include(router.urls + post_router.urls)),
 ]
